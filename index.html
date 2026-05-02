@@ -292,7 +292,8 @@
     <div class="grid">
       <div class="full">
         <label for="patientName">Patient Name</label>
-        <input type="text" id="patientName">
+<input type="text" id="patientName" list="patientNameList" autocomplete="off">
+<datalist id="patientNameList"></datalist>
       </div>
 
       <div>
@@ -446,7 +447,8 @@
     let appData = {
       services: [],
       optionsMap: {},
-      priceMap: {}
+      priceMap: {},
+      patients: []
     };
 
     let pendingSubmission = null;
@@ -582,6 +584,7 @@
 
         appData = data;
         populateServices();
+        populatePatients();
       } catch (err) {
         showError(err);
       }
@@ -601,6 +604,16 @@
       populateOptions();
     }
 
+    function populatePatients() {
+  const list = document.getElementById('patientNameList');
+  list.innerHTML = '';
+
+  (appData.patients || []).forEach(function(name) {
+    const opt = document.createElement('option');
+    opt.value = name;
+    list.appendChild(opt);
+  });
+}
     function populateOptions() {
       const service = document.getElementById('service').value;
       const optionSelect = document.getElementById('option');
