@@ -606,13 +606,21 @@
 
     function populatePatients() {
   const list = document.getElementById('patientNameList');
+  if (!list) return;
+
   list.innerHTML = '';
 
-  (appData.patients || []).forEach(function(name) {
+  const patients = Array.isArray(appData.patients) ? appData.patients : [];
+
+  patients.forEach(function(name) {
+    if (!name) return;
+
     const opt = document.createElement('option');
     opt.value = name;
     list.appendChild(opt);
   });
+
+  console.log('Loaded patient count:', patients.length);
 }
     function populateOptions() {
       const service = document.getElementById('service').value;
