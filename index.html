@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joffre-Monaco Nursing Services</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="JM POS">
-<meta name="theme-color" content="#7A6E66">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" sizes="192x192" href="icon-192.png">
-<link rel="icon" sizes="512x512" href="icon-512.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="JM POS">
+  <meta name="theme-color" content="#7A6E66">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+
   <style>
     body {
-  font-family:'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
-  background: #E6DDD6;
-  margin: 0;
-  padding: 24px;
-  color: #4A423D;
-}
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+      background: #E6DDD6;
+      margin: 0;
+      padding: 24px;
+      color: #4A423D;
+    }
 
     .container {
       max-width: 850px;
@@ -32,18 +33,20 @@
       font-size: 24px;
       font-weight: bold;
     }
-  h1 {
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 36px
-    font-family:'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
-      }
 
-      h3 {
-        margin-bottom: 12px;
-        font-size: 24px;
-        font-family:'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
-      }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 36px;
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+    }
+
     .brand-header {
       display: flex;
       align-items: center;
@@ -65,7 +68,7 @@
       margin: 0;
       font-size: 28px;
       letter-spacing: 0.3px;
-      font-family:'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
     }
 
     .brand-subtitle {
@@ -78,15 +81,11 @@
       color: #4A423D;
     }
 
-    h3 {
-      margin-bottom: 12px;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      font-family:'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
       font-size: 22px;
       font-weight: bold;
     }
@@ -100,20 +99,20 @@
       font-weight: bold;
       margin-bottom: 6px;
       font-size: 18px;
-      font-family:'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
     }
 
     input, select {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  border: 1px solid #CFC3BC;
-  border-radius: 10px;
-  font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
-  font-size: 18px;
-  background: #FCF9F6;
-  color: #4A423D;
-}
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #CFC3BC;
+      border-radius: 10px;
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+      font-size: 18px;
+      background: #FCF9F6;
+      color: #4A423D;
+    }
 
     .currency-input,
     .percent-input {
@@ -121,13 +120,26 @@
     }
 
     .section {
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid #DDD2CB;
-  font-size: 22px;
-  font-weight: bold;
-      font-family:'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
-}
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #DDD2CB;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: 'Monotype Corsiva', 'Apple Chancery', 'Brush Script MT';
+    }
+
+    .service-line {
+      margin-bottom: 16px;
+      padding: 14px;
+      border: 1px solid #DDD2CB;
+      border-radius: 14px;
+      background: #FCF9F6;
+    }
+
+    .line-total {
+      background: #EEE6DF;
+      font-weight: bold;
+    }
 
     .payment-grid {
       display: grid;
@@ -149,6 +161,7 @@
       justify-content: space-between;
       margin: 6px 0;
       font-size: 16px;
+      gap: 12px;
     }
 
     .summary-row.total-due {
@@ -223,7 +236,9 @@
     .modal {
       background: #F6F1EC;
       width: 100%;
-      max-width: 560px;
+      max-width: 620px;
+      max-height: 85vh;
+      overflow-y: auto;
       border-radius: 18px;
       padding: 24px;
       box-shadow: 0 10px 30px rgba(74, 66, 61, 0.18);
@@ -248,6 +263,11 @@
       justify-content: space-between;
       gap: 12px;
       margin: 6px 0;
+      font-size: 16px;
+    }
+
+    .modal-summary-row strong {
+      text-align: right;
     }
 
     .modal-actions {
@@ -279,6 +299,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="brand-header">
@@ -292,11 +313,11 @@
     <div class="grid">
       <div class="full">
         <label for="patientName">Patient Name</label>
-<input type="text" id="patientName" list="patientNameList" autocomplete="off">
-<datalist id="patientNameList"></datalist>
+        <input type="text" id="patientName" list="patientNameList" autocomplete="off">
+        <datalist id="patientNameList"></datalist>
       </div>
 
-      <div>
+      <div class="full">
         <label for="city">Location</label>
         <select id="city">
           <option value="">Select Location</option>
@@ -305,23 +326,12 @@
         </select>
       </div>
 
-      <div>
-        <label for="service">Service</label>
-        <select id="service">
-          <option value="">Loading...</option>
-        </select>
-      </div>
-
-      <div id="optionWrap">
-        <label for="option">Option</label>
-        <select id="option">
-          <option value="">No option needed</option>
-        </select>
-      </div>
-
-      <div>
-        <label for="units">Units</label>
-        <input type="number" id="units" min="0" step="1" value="1">
+      <div class="full">
+        <label>Services</label>
+        <div id="serviceLines"></div>
+        <button type="button" class="secondary" onclick="addServiceLine()" style="margin-top:12px;">
+          Add Service
+        </button>
       </div>
     </div>
 
@@ -351,7 +361,7 @@
     </div>
 
     <div class="summary">
-      <div class="summary-row"><span>Charge per Unit</span><strong id="sumChargePerUnit">$0.00</strong></div>
+      <div class="summary-row"><span>Charge per Unit</span><strong id="sumChargePerUnit">Multiple</strong></div>
       <div class="summary-row"><span>Gross Charge</span><strong id="sumGross">$0.00</strong></div>
       <div class="summary-row"><span>Discount</span><strong id="sumDiscount">$0.00</strong></div>
       <div class="summary-row"><span>Total Charged</span><strong id="sumTotalCharged">$0.00</strong></div>
@@ -362,6 +372,7 @@
 
     <div class="section">
       <h3>Payments</h3>
+
       <div class="payment-grid">
         <div>
           <label for="payCreditCardDisplay">Credit Card</label>
@@ -443,7 +454,7 @@
 
   <script>
     const API_URL = 'https://script.google.com/macros/s/AKfycbxLz1LVoxg82Bv9f2yxI4GfPRJKIItw68wqIWJ9LGwRcteamwZ9oSD0S1FF8WHEMm2p/exec';
-    
+
     let appData = {
       services: [],
       optionsMap: {},
@@ -452,6 +463,7 @@
     };
 
     let pendingSubmission = null;
+    let serviceLineCounter = 0;
 
     function formatMoney(value) {
       return '$' + (Number(value || 0)).toFixed(2);
@@ -567,12 +579,6 @@
       return String(service || '').trim() + '|' + String(option || '').trim();
     }
 
-    function getSelectedPriceRow() {
-      const service = document.getElementById('service').value;
-      const option = document.getElementById('option').value || '';
-      return appData.priceMap[helperKey(service, option)] || null;
-    }
-
     async function loadAppData() {
       try {
         const res = await fetch(`${API_URL}?action=getAppData`);
@@ -591,8 +597,85 @@
     }
 
     function populateServices() {
-      const serviceSelect = document.getElementById('service');
-      serviceSelect.innerHTML = '<option value="">Select service</option>';
+      const serviceLines = document.getElementById('serviceLines');
+      serviceLines.innerHTML = '';
+      serviceLineCounter = 0;
+      addServiceLine();
+    }
+
+    function populatePatients() {
+      const list = document.getElementById('patientNameList');
+      if (!list) return;
+
+      list.innerHTML = '';
+
+      const patients = Array.isArray(appData.patients) ? appData.patients : [];
+
+      patients.forEach(function(name) {
+        if (!name) return;
+
+        const opt = document.createElement('option');
+        opt.value = name;
+        list.appendChild(opt);
+      });
+
+      console.log('Loaded patient count:', patients.length);
+    }
+
+    function addServiceLine(existingData) {
+      serviceLineCounter++;
+
+      const lineId = serviceLineCounter;
+      const wrap = document.createElement('div');
+
+      wrap.className = 'service-line';
+      wrap.dataset.lineId = lineId;
+
+      wrap.innerHTML = `
+        <div class="grid">
+          <div>
+            <label>Service</label>
+            <select class="line-service" onchange="populateLineOptions(${lineId}); updateSummary();">
+              <option value="">Select service</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Option</label>
+            <select class="line-option" onchange="updateSummary();">
+              <option value="">No option needed</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Units</label>
+            <input type="number" class="line-units" min="0" step="1" value="1" oninput="updateSummary();">
+          </div>
+
+          <div>
+            <label>Charge per Unit</label>
+            <input type="text" class="line-charge" value="$0.00" disabled>
+          </div>
+
+          <div>
+            <label>Line Total</label>
+            <input type="text" class="line-total" value="$0.00" disabled>
+          </div>
+
+          <div>
+            <label>Total Cost</label>
+            <input type="text" class="line-cost" value="$0.00" disabled>
+          </div>
+
+          <div class="full">
+            <button type="button" class="danger" onclick="removeServiceLine(${lineId})">Remove Service</button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('serviceLines').appendChild(wrap);
+
+      const serviceSelect = wrap.querySelector('.line-service');
 
       appData.services.forEach(function(service) {
         const opt = document.createElement('option');
@@ -601,42 +684,31 @@
         serviceSelect.appendChild(opt);
       });
 
-      populateOptions();
+      if (existingData) {
+        serviceSelect.value = existingData.service || '';
+        populateLineOptions(lineId);
+        wrap.querySelector('.line-option').value = existingData.option || '';
+        wrap.querySelector('.line-units').value = existingData.units || 1;
+      }
+
+      updateSummary();
     }
 
-    function populatePatients() {
-  const list = document.getElementById('patientNameList');
-  if (!list) return;
+    function populateLineOptions(lineId) {
+      const wrap = document.querySelector(`.service-line[data-line-id="${lineId}"]`);
+      if (!wrap) return;
 
-  list.innerHTML = '';
-
-  const patients = Array.isArray(appData.patients) ? appData.patients : [];
-
-  patients.forEach(function(name) {
-    if (!name) return;
-
-    const opt = document.createElement('option');
-    opt.value = name;
-    list.appendChild(opt);
-  });
-
-  console.log('Loaded patient count:', patients.length);
-}
-    function populateOptions() {
-      const service = document.getElementById('service').value;
-      const optionSelect = document.getElementById('option');
-      const optionWrap = document.getElementById('optionWrap');
+      const service = wrap.querySelector('.line-service').value;
+      const optionSelect = wrap.querySelector('.line-option');
 
       optionSelect.innerHTML = '';
 
       const options = appData.optionsMap[service] || [];
 
       if (options.length === 0) {
-        optionWrap.classList.add('hidden');
         optionSelect.innerHTML = '<option value="">No option needed</option>';
         optionSelect.value = '';
       } else {
-        optionWrap.classList.remove('hidden');
         optionSelect.innerHTML = '<option value="">Select option</option>';
 
         options.forEach(function(option) {
@@ -648,6 +720,26 @@
       }
 
       updateSummary();
+    }
+
+    function removeServiceLine(lineId) {
+      const lines = document.querySelectorAll('.service-line');
+
+      if (lines.length <= 1) {
+        showError('At least one service is required.');
+        return;
+      }
+
+      const wrap = document.querySelector(`.service-line[data-line-id="${lineId}"]`);
+      if (wrap) wrap.remove();
+
+      updateSummary();
+    }
+
+    function getPriceRowForLine(line) {
+      const service = line.querySelector('.line-service').value;
+      const option = line.querySelector('.line-option').value || '';
+      return appData.priceMap[helperKey(service, option)] || null;
     }
 
     function getDiscountAmount(grossCharge) {
@@ -684,25 +776,44 @@
     }
 
     function getComputedTotals() {
-      const selected = getSelectedPriceRow();
-      const units = Number(document.getElementById('units').value || 0);
-      const tip = Number(document.getElementById('tip').value || 0);
+      const lines = document.querySelectorAll('.service-line');
 
-      const chargePerUnit = selected ? Number(selected.chargePerUnit || 0) : 0;
-      const costPerUnit = selected ? Number(selected.costPerUnit || 0) : 0;
+      let grossCharge = 0;
+      let totalCost = 0;
+      let populatedServiceCount = 0;
 
-      const grossCharge = units * chargePerUnit;
+      lines.forEach(function(line) {
+        const selected = getPriceRowForLine(line);
+        const service = line.querySelector('.line-service').value;
+        const units = Number(line.querySelector('.line-units').value || 0);
+
+        const chargePerUnit = selected ? Number(selected.chargePerUnit || 0) : 0;
+        const costPerUnit = selected ? Number(selected.costPerUnit || 0) : 0;
+
+        const lineGross = units * chargePerUnit;
+        const lineCost = units * costPerUnit;
+
+        if (service) populatedServiceCount++;
+
+        grossCharge += lineGross;
+        totalCost += lineCost;
+
+        line.querySelector('.line-charge').value = formatMoney(chargePerUnit);
+        line.querySelector('.line-total').value = formatMoney(lineGross);
+        line.querySelector('.line-cost').value = formatMoney(lineCost);
+      });
+
       let discount = getDiscountAmount(grossCharge);
       if (discount > grossCharge) discount = grossCharge;
 
       const totalCharged = grossCharge - discount;
-      const totalCost = units * costPerUnit;
+      const tip = Number(document.getElementById('tip').value || 0);
       const finalTotal = totalCharged + tip;
       const paymentsEntered = getPaymentTotal();
       const remaining = finalTotal - paymentsEntered;
 
       return {
-        chargePerUnit,
+        populatedServiceCount,
         grossCharge,
         discount,
         totalCharged,
@@ -717,7 +828,9 @@
     function updateSummary() {
       const totals = getComputedTotals();
 
-      document.getElementById('sumChargePerUnit').textContent = formatMoney(totals.chargePerUnit);
+      document.getElementById('sumChargePerUnit').textContent =
+        totals.populatedServiceCount <= 1 ? 'Single Service' : 'Multiple Services';
+
       document.getElementById('sumGross').textContent = formatMoney(totals.grossCharge);
       document.getElementById('sumDiscount').textContent = formatMoney(totals.discount);
       document.getElementById('sumTotalCharged').textContent = formatMoney(totals.totalCharged);
@@ -731,12 +844,20 @@
     }
 
     function collectFormData() {
+      const services = [];
+
+      document.querySelectorAll('.service-line').forEach(function(line) {
+        services.push({
+          service: line.querySelector('.line-service').value,
+          option: line.querySelector('.line-option').value || '',
+          units: Number(line.querySelector('.line-units').value || 0)
+        });
+      });
+
       return {
         patientName: document.getElementById('patientName').value.trim(),
         city: document.getElementById('city').value,
-        service: document.getElementById('service').value,
-        option: document.getElementById('option').value || '',
-        units: Number(document.getElementById('units').value || 0),
+        services: services,
         discountType: document.getElementById('discountType').value,
         discountValue: Number(document.getElementById('discountValue').value || 0),
         tip: Number(document.getElementById('tip').value || 0),
@@ -748,6 +869,18 @@
           zelle: Number(document.getElementById('payZelle').value || 0)
         }
       };
+    }
+
+    function buildServiceSummaryRows(services) {
+      return services.map(function(item, index) {
+        const optionText = item.option ? item.option : 'No option';
+        return `
+          <div class="modal-summary-row">
+            <span>Service ${index + 1}</span>
+            <strong>${escapeHtml(item.service || '')} | ${escapeHtml(optionText)} | Units: ${item.units}</strong>
+          </div>
+        `;
+      }).join('');
     }
 
     function buildPaymentSummaryRows(payments) {
@@ -784,15 +917,14 @@
 
       const data = collectFormData();
       const totals = getComputedTotals();
+      const serviceRows = buildServiceSummaryRows(data.services);
       const paymentRows = buildPaymentSummaryRows(data.payments);
 
       const confirmSummary = document.getElementById('confirmSummary');
       confirmSummary.innerHTML = `
         <div class="modal-summary-row"><span>Patient</span><strong>${escapeHtml(data.patientName || '')}</strong></div>
         <div class="modal-summary-row"><span>City</span><strong>${escapeHtml(data.city || '')}</strong></div>
-        <div class="modal-summary-row"><span>Service</span><strong>${escapeHtml(data.service || '')}</strong></div>
-        <div class="modal-summary-row"><span>Option</span><strong>${escapeHtml(data.option || 'None')}</strong></div>
-        <div class="modal-summary-row"><span>Units</span><strong>${data.units}</strong></div>
+        ${serviceRows}
         <div class="modal-summary-row"><span>Discount</span><strong>${getDiscountDisplayForConfirm(data)}</strong></div>
         <div class="modal-summary-row"><span>Total Charged</span><strong>${formatMoney(totals.totalCharged)}</strong></div>
         <div class="modal-summary-row"><span>Tip</span><strong>${formatMoney(data.tip)}</strong></div>
@@ -811,45 +943,46 @@
     }
 
     async function confirmSave() {
-  if (!pendingSubmission) return;
+      if (!pendingSubmission) return;
 
-  const savedPatientName = pendingSubmission.patientName || '';
+      const savedPatientName = pendingSubmission.patientName || '';
 
-  try {
-    const formData = new URLSearchParams();
-    formData.append('payload', JSON.stringify(pendingSubmission));
+      try {
+        const formData = new URLSearchParams();
+        formData.append('payload', JSON.stringify(pendingSubmission));
 
-    const res = await fetch(API_URL, {
-      method: 'POST',
-      body: formData
-    });
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: formData
+        });
 
-    const text = await res.text();
-    const result = JSON.parse(text);
+        const text = await res.text();
+        const result = JSON.parse(text);
 
-    if (!result.success) {
-      throw new Error(result.error || 'Could not save transaction.');
+        if (!result.success) {
+          throw new Error(result.error || 'Could not save transaction.');
+        }
+
+        document.getElementById('confirmModal').style.display = 'none';
+        resetForm();
+        result.patientName = savedPatientName;
+        showSuccess(result);
+        pendingSubmission = null;
+      } catch (err) {
+        document.getElementById('confirmModal').style.display = 'none';
+        pendingSubmission = null;
+        showError(err);
+      }
     }
-
-    document.getElementById('confirmModal').style.display = 'none';
-    resetForm();
-    result.patientName = savedPatientName;
-    showSuccess(result);
-    pendingSubmission = null;
-  } catch (err) {
-    document.getElementById('confirmModal').style.display = 'none';
-    pendingSubmission = null;
-    showError(err);
-  }
-}
 
     function resetForm() {
       document.getElementById('patientName').value = '';
       document.getElementById('city').value = '';
-      document.getElementById('service').value = '';
-      document.getElementById('option').innerHTML = '<option value="">No option needed</option>';
-      document.getElementById('optionWrap').classList.remove('hidden');
-      document.getElementById('units').value = 1;
+
+      document.getElementById('serviceLines').innerHTML = '';
+      serviceLineCounter = 0;
+      addServiceLine();
+
       document.getElementById('discountType').value = 'none';
 
       document.getElementById('discountValue').value = 0;
@@ -895,6 +1028,7 @@
       const text =
         'The transaction was saved successfully.\n\n' +
         'Saved to: ' + result.sheetName + '\n' +
+        'Services saved: ' + (result.serviceCount || 1) + '\n' +
         'Final Total: ' + formatMoney(result.total) + '\n' +
         'Patient: ' + (result.patientName || '');
 
@@ -920,10 +1054,6 @@
         .replaceAll("'", '&#39;');
     }
 
-    document.getElementById('service').addEventListener('change', populateOptions);
-    document.getElementById('option').addEventListener('change', updateSummary);
-    document.getElementById('units').addEventListener('input', updateSummary);
-
     document.getElementById('discountType').addEventListener('change', resetDiscountFieldForType);
     document.getElementById('discountValueDisplay').addEventListener('blur', formatDiscountField);
 
@@ -934,57 +1064,63 @@
     document.getElementById('payCreditCardDisplay').addEventListener('blur', function() {
       formatCurrencyField('payCreditCardDisplay', 'payCreditCard');
     });
+
     document.getElementById('payCashCheckDisplay').addEventListener('blur', function() {
       formatCurrencyField('payCashCheckDisplay', 'payCashCheck');
     });
+
     document.getElementById('payVenmoDisplay').addEventListener('blur', function() {
       formatCurrencyField('payVenmoDisplay', 'payVenmo');
     });
+
     document.getElementById('payZelleDisplay').addEventListener('blur', function() {
       formatCurrencyField('payZelleDisplay', 'payZelle');
     });
+
     document.getElementById('creditCardFeeDisplay').addEventListener('blur', function() {
       formatCurrencyField('creditCardFeeDisplay', 'creditCardFee');
     });
-    
+
     prepareCurrencyFieldForEntry('tipDisplay');
     prepareCurrencyFieldForEntry('payCreditCardDisplay');
     prepareCurrencyFieldForEntry('payCashCheckDisplay');
     prepareCurrencyFieldForEntry('payVenmoDisplay');
     prepareCurrencyFieldForEntry('payZelleDisplay');
     prepareCurrencyFieldForEntry('creditCardFeeDisplay');
+
     const discountDisplay = document.getElementById('discountValueDisplay');
 
-discountDisplay.addEventListener('focus', function() {
-  const type = document.getElementById('discountType').value;
+    discountDisplay.addEventListener('focus', function() {
+      const type = document.getElementById('discountType').value;
 
-  if (type === 'none') return;
+      if (type === 'none') return;
 
-  if (discountDisplay.value === '--' || discountDisplay.value === '$0.00' || discountDisplay.value === '0.00%') {
-    discountDisplay.value = '';
-  } else {
-    discountDisplay.select();
-  }
-});
+      if (discountDisplay.value === '--' || discountDisplay.value === '$0.00' || discountDisplay.value === '0.00%') {
+        discountDisplay.value = '';
+      } else {
+        discountDisplay.select();
+      }
+    });
 
-discountDisplay.addEventListener('blur', function() {
-  const type = document.getElementById('discountType').value;
+    discountDisplay.addEventListener('blur', function() {
+      const type = document.getElementById('discountType').value;
 
-  if (type === 'none') {
-    discountDisplay.value = '--';
-    return;
-  }
+      if (type === 'none') {
+        discountDisplay.value = '--';
+        return;
+      }
 
-  if (discountDisplay.value.trim() === '') {
-    if (type === 'percent') {
-      discountDisplay.value = '0.00%';
-    } else {
-      discountDisplay.value = '$0.00';
-    }
-  }
+      if (discountDisplay.value.trim() === '') {
+        if (type === 'percent') {
+          discountDisplay.value = '0.00%';
+        } else {
+          discountDisplay.value = '$0.00';
+        }
+      }
 
-  formatDiscountField();
-});
+      formatDiscountField();
+    });
+
     loadAppData();
     resetDiscountFieldForType();
   </script>
